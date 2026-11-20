@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2 class="logo">Utkarsh</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button id="themeBtn">Dark mode</button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <p id="greeting" class="small">Hello, I’m</p>
+            <h1>Utkarsh</h1>
+            <h3 class="tagline">Code by day, sketches by night</h3>
+            <p class="intro">
+                First-year B.Tech Computer Science student from Lucknow.
+                I like building small things with code and I’m slowly
+                getting into cyber security.
+            </p>
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn outline" href="#contact">Contact me</a>
+        </div>
+        <div class="hero-img">
+            <img src="profile.jpeg" alt="Utkarsh" width="300" height="300">
+            <span class="badge b1">Anime fan</span>
+            <span class="badge b2">Sketching</span>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="two-col">
+            <div>
+                <p>
+                    I’m Utkarsh, born and raised in Lucknow. I’m studying B.Tech in
+                    Computer Science at KIET Deemed to be University and I’m
+                    in my <b>first year</b>.
+                </p>
+                <p>
+                    I started with Python in class 12. Now I’m learning C++,
+                    HTML, CSS and basic JavaScript, and trying out cyber security
+                    tools on my own to see how they work.
+                </p>
+            </div>
+            <div class="card note">
+                <h3>Outside of code</h3>
+                <ul>
+                    <li>Watching anime</li>
+                    <li>Sketching</li>
+                    <li>Listening to music</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🎓 B.Tech in Computer Science</h3>
+                <p>KIET Deemed to be University</p>
+                <p class="small">1st year (currently pursuing)</p>
+            </div>
+            <div class="card">
+                <h3>📘 Class 12</h3>
+                <p>Lucknow Public School, Lucknow</p>
+                <p class="small">Year : 2025</p>
+            </div>
+            <div class="card">
+                <h3>📗 Class 10</h3>
+                <p>Lucknow Public School, Lucknow</p>
+                <p class="small">Year : 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <h3>Technical</h3>
+        <div class="chips">
+            <span class="chip c1">Python</span>
+            <span class="chip c2">C++</span>
+            <span class="chip c3">HTML</span>
+            <span class="chip c1">CSS</span>
+            <span class="chip c2">JavaScript (basics)</span>
+            <span class="chip c3">Cyber security (exploring)</span>
+        </div>
+        <h3>Non-technical</h3>
+        <div class="chips">
+            <span class="chip c3">Sketching</span>
+            <span class="chip c1">Quick learner</span>
+            <span class="chip c2">Teamwork</span>
+            <span class="chip c3">Communication</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="card project">
+                <img src="p1.svg" alt="Portfolio project">
+                <h3>Personal Portfolio</h3>
+                <p>This website, made with HTML, CSS and a little JavaScript.</p>
+            </div>
+            <div class="card project">
+                <img src="p2.svg" alt="Movie project">
+                <h3>Movie Search and Recommendation</h3>
+                <p>Movie browsing with search, genres and favourites. Work in progress.</p>
+            </div>
+            <div class="card project">
+                <img src="p3.svg" alt="C++ programs">
+                <h3>C++ practice programs</h3>
+                <p>Small programs I write while learning C++.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:2630btech2301@kiet.edu">2630btech2301@kiet.edu</a></p>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <span class="error" id="nameError"></span>
+
+            <label for="email">Email</label>
+            <input type="text" id="email">
+            <span class="error" id="emailError"></span>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5"></textarea>
+            <span class="error" id="messageError"></span>
+
+            <button type="submit" class="btn">Send message</button>
+            <p id="success"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>Made by Utkarsh, Lucknow 2026</p>
+    </footer>
+
+    <a href="#home" id="topBtn">↑</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
