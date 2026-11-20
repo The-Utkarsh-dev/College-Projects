@@ -1,0 +1,253 @@
+:root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --text: #f1f1f1;
+    --gold: #ffb400;
+    --red: #ff4d5a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.small {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 2px 0;
+    color: #b5b9c7;
+}
+
+/* navbar stays on top while scrolling */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 30px;
+    background-color: #000;
+    border-bottom: 3px solid var(--gold);
+}
+
+.logo {
+    margin: 0;
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 34px;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.navbar nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+/* hero */
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #240046, #3b4cca 55%, #ff4d5a);
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 84px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#searchBox {
+    width: 90%;
+    max-width: 500px;
+    padding: 14px 22px;
+    font-size: 18px;
+    font-family: inherit;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+}
+
+#searchBox:focus {
+    box-shadow: 0 0 0 4px var(--gold);
+}
+
+/* sections */
+section {
+    padding: 50px 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 44px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    border-left: 8px solid var(--gold);
+    padding-left: 12px;
+}
+
+/* genre buttons */
+.genre {
+    padding: 6px 18px;
+    margin: 4px 4px 14px 0;
+    background-color: transparent;
+    color: var(--text);
+    border: 2px solid var(--gold);
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.genre:hover {
+    background-color: #3a3010;
+}
+
+.genre.active {
+    background-color: var(--gold);
+    color: #000;
+    font-weight: 600;
+}
+
+/* movie cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.movie {
+    background-color: var(--card);
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.movie:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(255, 180, 0, 0.35);
+}
+
+/* poster box is relative so the rating can sit on the corner */
+.poster {
+    position: relative;
+}
+
+.poster img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.rating {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 3px 10px;
+    background-color: var(--gold);
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+.movie h3 {
+    font-size: 17px;
+    margin: 10px 0 2px;
+}
+
+.desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: #d3d6e0;
+}
+
+.heart {
+    width: 100%;
+    padding: 7px;
+    background-color: transparent;
+    color: var(--text);
+    border: 2px solid var(--red);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.heart:hover {
+    background-color: var(--red);
+}
+
+.heart.saved {
+    background-color: var(--red);
+}
+
+#noResult, #favMessage, #recMessage {
+    color: var(--gold);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #000;
+    border-top: 3px solid var(--gold);
+    font-size: 14px;
+}
+
+/* favourites button stays fixed at bottom right */
+#favBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 18px;
+    background-color: var(--red);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 52px;
+    }
+    .navbar {
+        padding: 8px 15px;
+    }
+    .navbar nav a {
+        margin: 0 6px;
+        font-size: 14px;
+    }
+    section {
+        padding: 35px 15px;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
